@@ -38,3 +38,5 @@ build/
 
 **/frontend/generated
 **/index.html
+
+**/.gradle/**
