@@ -72,3 +72,25 @@ So Gradle plugin did not lookup correctly the package found
 Test the configuration with this project which is the same project based on Maven and Gradle
 Mind to delete `package.json` and `package-lock.json` in order to force the lookup
 
+### Command line
+
+#### Gradle
+
+Ensure no `package.json`, `package-lock.json`, `tsconfig.json`, `types.d.ts`, `vite.config.ts`, `vite.generated.ts`
+Execute
+`.\gradlew.bat :Example-Frontend:bootRun`
+
+The generated `package.json` file [package-gradle.json](Example-Parent/Example-Frontend/package-gradle.json). This file did not contain de.f0rce package
+
+#### Maven
+
+Ensure no `package.json`, `package-lock.json`, `tsconfig.json`, `types.d.ts`, `vite.config.ts`, `vite.generated.ts`
+
+With IntelliJ, load as Maven project
+Execute the ExampleApp run configuration
+
+I have not managed to compile with dependencies in command line...
+
+The generated `package.json` file [package-maven.json](Example-Parent/Example-Frontend/package-maven.json)
+
+
